@@ -5,7 +5,6 @@ import 'package:http/http.dart' as http;
 import 'package:poke_app/models/pokemon.dart';
 import 'package:poke_app/models/pokemon_result.dart';
 import 'package:poke_app/ui/all_pokemons/pokemons_list.dart';
-import 'package:poke_app/ui/all_pokemons/bottom_progress_bar.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class AllPokemon extends StatefulWidget {
@@ -60,10 +59,6 @@ class _AllPokemonState extends State<AllPokemon> {
     for (var result in pokemons) {
       getPokemonData(result.url);
     }
-
-    setState(() {
-      isLoading = false;
-    });
   }
 
   void getPokemonData(String url) async {
@@ -74,6 +69,7 @@ class _AllPokemonState extends State<AllPokemon> {
     setState(() {
       pokemons.add(pokemon);
       pokemons.sort((a, b) => a.id.compareTo(b.id));
+      isLoading = false;
     });
   }
 
@@ -82,7 +78,7 @@ class _AllPokemonState extends State<AllPokemon> {
     return Material(
       child: Scaffold(
         appBar: AppBar(
-          title: "Poke App".text.black.make(),
+          title: "Poke App".text.white.bold.make(),
         ),
         body: Container(
           color: Colors.black,
@@ -97,7 +93,12 @@ class _AllPokemonState extends State<AllPokemon> {
                         pokemonList: pokemons,
                       ).p12(),
               ),
-              BottomProgressBar(isLoading: isLoading),
+              Container(
+                  height: (isLoading && pokemons.isNotEmpty) ? 50.0 : 0,
+                  color: Colors.transparent,
+                  child: const Center(
+                    child: CircularProgressIndicator(),
+                  )),
             ],
           ),
         ),
