@@ -1,16 +1,10 @@
-# poke_app
+## PokeDex
+Poke-App is a simple Application that displays the list of Pokemon data fetched from Poke-API.
 
-A new Flutter project.
+<img src="/previews/pokeapi.gif" align="right" width="32%"/>
 
-## Getting Started
+## App Preview
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| All Pokemon | Pokemon Detail |
+| ----------- | -------------- |
+| <img src="https://user-images.githubusercontent.com/65807152/140811383-4c74819e-1279-4d5f-8eb6-853821d08661.jpg" width=250> | <img src="https://user-images.githubusercontent.com/65807152/140811527-099690b4-37ba-4301-861e-93ee4145c0e7.jpg" width=250> |
