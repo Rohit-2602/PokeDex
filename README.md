@@ -1,7 +1,7 @@
 ## PokeDex
 Poke-App is a simple Application that displays the list of Pokemon data fetched from Poke-API.
 
-<img src="/previews/pokeapi.gif" align="right" width="32%"/>
+<img src="/previews/pokeapi.gif" align="right" width="30%"/>
 
 ## App Preview
 
